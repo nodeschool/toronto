@@ -1,4 +1,4 @@
-# Torontnode!
+# Toronode!
 
 nodeschool group for Toronto, ON Canada
 
