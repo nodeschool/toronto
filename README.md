@@ -1,9 +1,15 @@
 # Toronode!
 
-nodeschool group for Toronto, ON Canada
+This is the **nodeschool** chapter for [Toronto, ON Canada](https://www.google.com/maps?q=toronto&es_sm=91&um=1&ie=UTF-8&sa=X&ei=iv0jVfCBHIimgwTOgYPwBw&ved=0CAgQ_AUoAg). 
 
 # Do u kno node?
 
-If you do node and want to help, PR this thing with details or contact @rmillr and we can teach the things!
+If you do node and want to help teach or contribute in anyway, make a [Pull Request](https://github.com/nodeschool/toronto/pulls) and add your name to the list below with relevant contact details; And/or contact [@rmillr](http://github.com/rmillr) for further information. **We can teach the things!**
 
-(website maybe soon, k?)
+*Website maybe soon, k?*
+
+# Interested Peeps
+
+- Darcy Clarke: [@darcyclarke](http://github.com/darcyclarke)
+- Jeff Jewiss: [@jeffjewiss](http://github.com/jeffjewiss)
+
