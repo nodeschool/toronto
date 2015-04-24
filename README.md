@@ -13,4 +13,5 @@ If you do node and want to help teach or contribute in anyway, make a [Pull Requ
 - Darcy Clarke: [@darcyclarke](http://github.com/darcyclarke)
 - Rich Gilbank: [@richgilbank](http://github.com/richgilbank)
 - Jeff Jewiss: [@jeffjewiss](http://github.com/jeffjewiss)
+- Brenna O'Brien [@brenna](http://github.com/brenna)
 
