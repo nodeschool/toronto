@@ -16,3 +16,4 @@ If you do node and want to help teach or contribute in anyway, make a [Pull Requ
 - Jeff Jewiss: [@jeffjewiss](http://github.com/jeffjewiss)
 - Brenna O'Brien [@brenna](http://github.com/brenna)
 - Laura DeGroot [@lauradegroot](http://github.com/lauradegroot)
+- Chris Mendis [@chrismendis](http://github.com/chrismendis)
