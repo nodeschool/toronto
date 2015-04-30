@@ -1,3 +1,4 @@
+![The more you node](https://lh3.googleusercontent.com/-2OoNYJvLvUE/UXBI2YH1FHI/AAAAAAAAYqQ/uuvTgt1OYQs/s640/themoreyounode.jpg)
 # Toronode!
 
 This is the **nodeschool** chapter for [Toronto, ON Canada](https://www.google.com/maps?q=toronto&es_sm=91&um=1&ie=UTF-8&sa=X&ei=iv0jVfCBHIimgwTOgYPwBw&ved=0CAgQ_AUoAg). 
