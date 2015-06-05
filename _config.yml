@@ -1,0 +1,23 @@
+markdown: kramdown
+highlighter: pygments
+permalink: /:title
+url: "http://nodeschool.io/toronto"
+timezone: America/Toronto
+
+kramdown:
+  input: GFM
+
+# Use the following plug-ins
+gems:
+  - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Exclude these files from your production _site
+exclude:
+  - README.md
+  - .editorconfig
+  - Procfile
+  - .sass-cache/
