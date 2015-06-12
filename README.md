@@ -21,3 +21,4 @@ If you do node and want to help teach or contribute in anyway, make a [Pull Requ
 - Wisam Zaghal [@wzaghal](http://github.com/wzaghal)
 - Mohamad Atie [@mohamadatieh](https://github.com/MohamadAtieh)
 - Ahmad Nassri [@AhmadNassri](https://github.com/ahmadnassri)
+- Ryan Christiani [@rchristiani](https://github.com/Rchristiani)
