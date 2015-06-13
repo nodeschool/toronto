@@ -19,3 +19,4 @@ If you do node and want to help teach or contribute in anyway, make a [Pull Requ
 - Chris Mendis [@chrismendis](http://github.com/chrismendis)
 - Andrew D'Amelio [@andrewdamelio](http://github.com/andrewdamelio)
 - Wisam Zaghal [@wzaghal](http://github.com/wzaghal)
+- Ahmad Nassri [@AhmadNassri](https://github.com/ahmadnassri)
