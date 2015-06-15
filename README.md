@@ -7,7 +7,7 @@ This is the **nodeschool** chapter for [Toronto, ON Canada](https://www.google.c
 
 If you do node and want to help teach or contribute in anyway, make a [Pull Request](https://github.com/nodeschool/toronto/pulls) and add your name to the list below with relevant contact details; And/or contact [@rmillr](http://github.com/rmillr) for further information. **We can teach the things!**
 
-*Website maybe soon, k?*
+[http://nodeschool.io/toronto/](http://nodeschool.io/toronto/)
 
 # Interested Peeps
 
