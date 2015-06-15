@@ -1,6 +1,8 @@
 ![NodeSchool Toronto Logo](http://nodeschool.io/toronto/i/nodeschool-toronto-logo.svg)
 
-# [Toronto](https://www.google.com/maps?q=toronto&es_sm=91&um=1&ie=UTF-8&sa=X&ei=iv0jVfCBHIimgwTOgYPwBw&ved=0CAgQ_AUoAg) NodeSchool Chapter
+# NodeSchool [Toronto](https://www.google.com/maps?q=toronto&es_sm=91&um=1&ie=UTF-8&sa=X&ei=iv0jVfCBHIimgwTOgYPwBw&ved=0CAgQ_AUoAg)
+
+**NodeSchool** is focused around open source workshops that teach web software skills. Individuals are encouraged to do the workshops on their own or attend one of the events. The NodeSchool workshops are used as the curriculum while mentors are here to help attendees work through challenges. Participating in one of the events is easy:
 
 ### Attendees
 
