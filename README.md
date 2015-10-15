@@ -26,6 +26,7 @@ If you want to help teach or contribute in anyway, make a [Pull Request](https:/
 - Ahmad Nassri [@AhmadNassri](https://github.com/ahmadnassri)
 - Ryan Christiani [@rchristiani](https://github.com/Rchristiani)
 - Vlad Filippov [@vladikoff](http://github.com/vladikoff)
+- Jeremiah Senkpiel [@Fishrock123](https://github.com/Fishrock123)
 
 ### Code of Conduct
 
