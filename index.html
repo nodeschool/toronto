@@ -7,12 +7,9 @@
     <meta name="description" content="Nodeschool Toronto Chapter">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Nodeschool Toronto</title>
-
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
     <link href="styles.css" rel="stylesheet">
     <script src="js/particles.min.js"></script>
-
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -20,71 +17,282 @@
   </head>
 
   <body>
-    <header id="header">
-      <h1 class="noselect">
-        <span>Nodeschool</span>
-        <img class="school" src="i/schoolhouse_white.svg" alt="Node School House">
-        <span>Toronto</span>
-      </h1>
-    </header>
 
-    <main>
-      <section class="container">
-        <h2>About</h2>
-        <p><a href="http://nodeschool.io">NodeSchool</a> is a selection of open source workshops that teach web software skills. You can do them on your own or at one of the monthly NodeSchool Toronto events.</p>
+    <main class="main">
 
-        <h2>Community</h2>
-        The NodeSchool community is open to anyone. Whether you've been able to attend an event or not, you can join the discussion around learning Node in the Slack team.
+      <section class="panel text">
 
-        <br>
-        <br>
+        <!-- Navigation -->
+        <nav class="nav">
+          <ul>
+            <li><a href="#" class="ir home">Home</a></li>
+            <li><a href="#community" class="ir community">Community</a></li>
+            <li><a href="#events" class="ir events">Events</a></li>
+            <li><a href="#faq" class="ir faq">Frequently Asked Questions</a></li>
+            <li><a href="#mentors" class="ir mentors">Mentors</a></li>
+            <li><a href="#codeofconduct" class="ir code">Code of Conduct</a></li>
+          </ul>
+        </nav>
 
-        <script async defer src="https://nodeschool-toronto-slackin.herokuapp.com/slackin.js"></script>
-        <a href="https://twitter.com/NodeSchoolTO" class="twitter-follow-button" data-show-count="false">Follow @NodeSchoolTO</a>
+        <div class="container">
 
-        <h2>Events</h2>
-        <p>NodeSchool Toronto events are run by an enthusiastic group of volunteers. The workshops will be held monthly and will always be free.</p>
-        <p>The events offer a low-key environment to learn or practice Node and are generally three hours long.</p>
+          <!-- Header -->
+          <div class="header">
 
-        <a href="https://ti.to/nodeschool-toronto/october-2015"><img class="logo" src="i/nodeschool-toronto-logo.svg" alt="NodeSchool Toronto Logo"></a>
-        <p class="next-event"><a href="https://ti.to/nodeschool-toronto/october-2015">Next event: Saturday, Oct 24th at Shopify</a></p>
+            <a class="logo" href="https://ti.to/nodeschool-toronto/october-2015"><img src="i/nodeschool-toronto-logo-black.svg" alt="NodeSchool Toronto Logo"></a>
 
-        <h2>How to prepare</h2>
-        <h3>Setup</h3>
-        <p>Our recommended way to install Node, if you haven't already, is by using Homebrew. First, visit <a href="http://brew.sh">brew.sh</a> and install Homebrew by following the instructions. Next, install Node by running the command <code>brew install node</code> to get the latest version.</p>
-          <p>Now, to get started with the first workshop, run the following in your terminal:</p>
-        <code class="terminal">
-          <pre>$ npm install -g learnyounode</pre>
-          <pre>$ learnyounode</pre>
-        </code>
+            <h1>Welcome to NodeSchool Toronto</h1>
 
-        <h3>What to expect</h3>
-        <p>NodeSchool is a self-directed learning environment, where you bring your own laptop to learn. The intention is for attendees to work on the Node workshops from <a href="http://nodeschool.io/#workshopper-list" target="_blank">nodeschool.io</a>. But if you have a personal project you are working on, do it! The goal of NodeSchool is to help people explore and learn Node. There will be mentors on hand at the events to help you when you hit any road blocks.</p>
+          </div>
 
-        <br>
-        <p class="next-event"><a href="https://ti.to/nodeschool-toronto/october-2015">Register for October 24th</a></p>
+          <h2 id="community">Our Community</h2>
+          <p>The NodeSchool community is <strong>open to anyone</strong>. Whether you're able to attend an event or not, you can join the discussion around learning Node in our Slack channel or by following us on Twitter.</p>
+
+          <p>
+          <script async defer src="https://nodeschool-toronto-slackin.herokuapp.com/slackin.js"></script>
+          <a href="https://twitter.com/NodeSchoolTO" class="twitter-follow-button" data-show-count="false">Follow @NodeSchoolTO</a></p>
+
+          <div class="tweets">
+            <a class="twitter-timeline" href="https://twitter.com/NodeSchoolTO" data-widget-id="654755935005446147">Tweets by @NodeSchoolTO</a>
+            <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+
+          <h2 id="events">Our Events</h2>
+          <p><strong>NodeSchool Toronto</strong> events are run by an enthusiastic group of volunteers. The workshops will be held monthly and will always be free.</p>
+          <p>The events offer a low-key environment to learn or practice Node and are generally three hours long.</p>
+
+          <h2 id="faq">Frequently Asked Questions</h2>
+
+          <h3>"What should I expect?"</h3>
+          <p>NodeSchool is a self-directed learning environment, where you bring your own laptop to learn. The intention is for attendees to work on the Node workshops from <a href="http://nodeschool.io/#workshopper-list" target="_blank">nodeschool.io</a>. But if you have a personal project you are working on, do it! The goal of NodeSchool is to help people explore and learn Node. There will be mentors on hand at the events to help you when you hit any road blocks.</p>
+
+          <h3>"How do I install Node?"</h3>
+          <p>Our recommended way to install Node is through something called "Homebrew".</p>
+          <p class="indent"><strong>1.</strong> Install Homebrew by copying the following command into a terminal/bash prompt:</p>
+          <code class="terminal"><pre>$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</pre>
+          </code>
+          <p class="indent"><strong>2.</strong> Once installed, run <code>brew install node</code> which should install the latest version of Node.</p>
+          <p>If you have any issues installing either Homebrew or Node no worries. We'll do our best to help you get set up once you arrive at an event.</p>
+
+          <h3>"What is a Workshopper?"</h3>
+          <p>Workshopper is the name used for the open source lesson modules associated with NodeSchool. All are self guided (you don't need to attend a workshop to do one) and most work offline.</p>
+
+          <h3>"How do I run a Workshopper?"</h3>
+          <p> To get started with a Workshopper tutorial you'll have to install and then run that program in terminal/bash. Here's an example of how to install and run the Beginner Node Workshopper:</p>
+          <code class="terminal">
+            <pre>$ npm install -g learnyounode</pre>
+            <pre>$ learnyounode</pre>
+          </code>
+
+          <h2 id="codeofconduct">Our Code of Conduct</h2>
+
+          <p>We, the organizers of <strong>NodeSchool Toronto</strong>, are dedicated to providing a harassment-free community for everyone, regardless of sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs. We do not tolerate harassment of community members in any form. Participants violating these rules may be sanctioned or expelled from the community at the discretion of the organizers of <strong>NodeSchool Toronto</strong>.</p>
+
+          <p>Harassment includes offensive verbal or written comments related to sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs, deliberate intimidation, threats, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention. Sexual language and imagery is not appropriate for any events at <strong>NodeSchool Toronto</strong> meetups or in any related communication channels. Community members asked to stop any harassing behavior are expected to comply immediately. Sponsors and presenters are also subject to the anti-harassment policy.</p>
+
+          <p>If a community member engages in harassing behavior, the organizers of <strong>NodeSchool Toronto</strong> may take any action they deem appropriate, including warning the offender or expulsion from the community. If you are being harassed, notice that someone else is being harassed, or have any concerns, please contact an organizer immediately.</p>
+
+          <!-- Footer -->
+          <div class="footer">
+
+            <h2 id="credit">Credits</h2>
+
+            <p class="credit">Our <strong>NodeSchool Toronto</strong> Hex Logo was kindly designed by <a href="http://willduart.com/">Will Du</a>.</p>
+
+            <p class="links">
+              <a href="https://ti.to/nodeschool-toronto" title="NodeSchool Toronto Event">Our Events</a>
+              <span class="divider">|</span>
+              <a href="https://twitter.com/NodeSchoolTO" title="NodeSchool Toronto Twitter">Our Twitter</a>
+              <span class="divider">|</span>
+              <a href="https://github.com/nodeschool/toronto" title="NodeSchool Toronto GitHub">Our GitHub</a>
+              <span class="divider">|</span>
+              <a href="http://nodeschool.io/" title="NodeSchool">NodeSchool.io</a>
+            </p>
+
+          </div>
+
+        </div>
 
       </section>
+
+      <aside class="panel side">
+
+        <div class="container">
+          <div class="inner">
+            <a class="logo" href="http://nodeschool.io">
+              <img src="i/schoolhouse_white.svg" alt="NodeSchool Logo">
+              <p class="about"><strong>NodeSchool</strong> is a selection of open source workshops that teach web software skills. You can do them on your own or at one of the monthly <strong>NodeSchool Toronto</strong> events.</p>
+            </a>
+            <div class="event">
+              <a href="https://ti.to/nodeschool-toronto/october-2015">Our next event is: <strong class="date">Saturday, Oct 24th</strong> at <strong class="location">Shopify</strong></a>
+              <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2887.0969998987766!2d-79.3978621839159!3d43.64615017912164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x882b34c4a09db007%3A0xd25e75caab787c06!2sShopify%2C+80+Spadina+Ave%2C+Toronto%2C+ON+M5V+2J4!3m2!1d43.6461502!2d-79.3956735!5e0!3m2!1sen!2sus!4v1444873053125" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <h2 id="mentors">Our Mentors</h2>
+
+            <p>If you want to help teach or contribute in anyway, make a <a href='https://github.com/nodeschool/toronto/pulls'>Pull Request</a> and add your name to the list of available mentors. We also ask that you please read the <a href='https://github.com/nodeschool/organizers/wiki/Event-Mentor-Best-Practices#on-being-a-mentor'>"On Being a Mentor"</a> tips for <strong>NodeSchool Organizers</strong>. If you're having any trouble joing the Slack channel, making a Pull Request or getting our attention, feel free to contact <a href='https://twitter.com/rickycodes'>@rickycodes</a> or <a href='https://twitter.com/jeffjewiss'>jeffjewiss</a> for further information. Mentors and Volunteers are currently contacted and confirmed, before each event, via our <a href='https://nodeschool-toronto-slackin.herokuapp.com/'>Slack Channel</a>.</p>
+
+            <div class="mentors">
+
+              <a href="https://twitter.com/rickycodes" target="_blank" class="mentor" style="background-image: url(i/mentors/ricky.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/jeffjewiss" target="_blank" class="mentor" style="background-image: url(i/mentors/jeff.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/brnnbrn" target="_blank" class="mentor" style="background-image: url(i/mentors/brenna.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/darcy" target="_blank" class="mentor" style="background-image: url(i/mentors/darcy.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/richgilbank" target="_blank" class="mentor" style="background-image: url(i/mentors/rich.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/andrewdamelio" target="_blank" class="mentor" style="background-image: url(i/mentors/andrew.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/tessthornton" target="_blank" class="mentor" style="background-image: url(i/mentors/tessa.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/ahmadnassri" target="_blank" class="mentor" style="background-image: url(i/mentors/ahmad.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/RChristiani" target="_blank" class="mentor" style="background-image: url(i/mentors/ryan.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/vladikoff" target="_blank" class="mentor" style="background-image: url(i/mentors/vlad.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+              <a href="https://twitter.com/drewisthe" target="_blank" class="mentor" style="background-image: url(i/mentors/drew.jpg);">
+                <div class="top"></div>
+                <div class="bottom"></div>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="particles" id="particles"></div>
+
+        <div class="images">
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/1.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/2.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/3.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/4.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/5.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/6.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/7.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/8.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/9.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/10.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/11.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/12.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/13.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/14.jpg);"></div>
+          </div>
+
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/1.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/2.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/3.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/4.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/5.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/6.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/7.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/8.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/9.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/10.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/11.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/12.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/13.jpg);"></div>
+          </div>
+          <div class="image-wrapper">
+            <div class="image" style="background-image: url(i/photos/14.jpg);"></div>
+          </div>
+
+      </aside>
 
     </main>
 
-    <footer>
-      <section class="container">
-        <nav>
-          <a href="https://ti.to/nodeschool-toronto" title="NodeSchool Toronto Event">Events</a>
-          <span class="divider">|</span>
-          <a href="https://github.com/nodeschool/toronto" title="NodeSchool Toronto GitHub">GitHub</a>
-          <span class="divider">|</span>
-          <a href="http://confcodeofconduct.com/" title="Code of Conduct">Code of Conduct</a>
-        </nav>
-        <p>Hex Logo by <a href="http://willduart.com/">Will Du</a></p>
-      </section>
-    </footer>
-
     <script type="text/javascript">
-      particlesJS.load('header', 'js/particles.json');
+      particlesJS.load('particles', 'js/particles.json');
     </script>
-    
+
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
     <script type="text/javascript">
