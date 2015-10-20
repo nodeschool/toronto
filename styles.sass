@@ -85,6 +85,17 @@ a
   text-shadow: none
   color: transparent
 
+.cf:before
+.cf:after
+  content: ' '
+  display: table
+
+.cf:after
+  clear: both
+
+.cf
+  *zoom: 1
+
 .indent
   padding-left: 2em
 
@@ -123,12 +134,10 @@ a
 .main
   display: flex
 
-  @media (screen and max-width: 800px)
-    flex-direction: column
-
   .panel
     display: flex
     flex: 1 1 50%
+    max-width: 50%
 
   // --------------------------------
   // Right Side
@@ -190,11 +199,10 @@ a
     .images
       width: 100%
 
-      &:hover .image-wrapper
-        opacity: 0.1
-
-        &:hover
-          opacity: 1
+      // &:hover .image-wrapper
+      //   opacity: 0.1
+      //   &:hover
+      //     opacity: 1
 
     .image-wrapper
       width: 33.3333%
@@ -230,6 +238,12 @@ a
       position: fixed
       background: black
       z-index: 9999
+      width: 80px
+      transition: width ease-in-out 0.2s
+      overflow: hidden
+
+      &:hover
+        width: 280px
 
       @media (screen and max-width: 800px)
         display: none
@@ -242,7 +256,7 @@ a
         list-style: none
 
         a
-          width: 80px
+          width: 280px
           height: 80px
           display: block
           position: relative
@@ -252,7 +266,7 @@ a
           &:hover
             background: $accent
 
-            &:before
+            &:before, &:after
               color: black
 
           &:before
@@ -262,10 +276,12 @@ a
             padding: 28px 0 0 0
             line-height: 100%
             text-align: center
+            left: 0
+            top: 0
             position: absolute
             display: block
-            height: 100%
-            width: 100%
+            height: 80px
+            width: 80px
             color: white
             transition: color ease-in-out 0.2s
 
@@ -286,6 +302,20 @@ a
 
           &.code:before
             content: '\e618' // e63b - flag // shield e67b
+
+          &:after
+            content: attr(data-text)
+            color: white
+            position: absolute
+            top: 0
+            left: 80px
+            padding: 38px 0 0
+            display: block
+            font-family: 'Open Sans', sans-serif
+            font-size: 18px
+            font-weight: 300
+            white-space: nowrap
+            transition: color ease-in-out 0.2s
 
     // --------------------------------
     // Text Container
@@ -400,6 +430,7 @@ a
     position: relative
     border: 8px solid $accent
     border-top: none
+    background: black
     transition: border-color ease-in-out 0.2s
 
     iframe
@@ -418,15 +449,6 @@ a
   width: 100%
   z-index: 900
 
-  &:hover
-
-    .mentor
-      opacity: 0.35
-
-      &:hover
-        transform: scale(1.2)
-        opacity: 1
-
   .mentor
     text-align: left
     display: inline-block
@@ -438,6 +460,10 @@ a
     background-color: black
     background-position: center
     transition: transform ease-in-out 0.2s, opacity ease-in-out 0.2s
+
+    &:hover
+      transform: scale(1.2)
+      opacity: 1
 
     .top, .bottom
       position: absolute
