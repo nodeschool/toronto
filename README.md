@@ -27,7 +27,7 @@ If you want to help teach or contribute in anyway, make a [Pull Request](https:/
 - Ryan Christiani [@rchristiani](https://github.com/Rchristiani)
 - Vlad Filippov [@vladikoff](http://github.com/vladikoff)
 
-### Code of Conduct 
+### Code of Conduct
 
 Please read our [code of conduct](http://confcodeofconduct.com/) before contributing to or attending one of our events.
 
