@@ -134,10 +134,22 @@ a
 .main
   display: flex
 
+  @media (screen and max-width: 800px)
+    display: block
+
   .panel
     display: flex
     flex: 1 1 50%
     max-width: 50%
+
+    @media (screen and max-width: 800px)
+      display: block
+      clear: both
+      width: 100%
+      max-width: 100%
+      flex: none
+      float: left
+      height: auto
 
   // --------------------------------
   // Right Side
@@ -189,6 +201,10 @@ a
           line-height: 200%
           text-shadow: 0 0 10px rgba(0,0,0,0.8)
 
+    @-moz-document url-prefix()
+      .particles
+        display: none
+
     .particles
       width: 100%
       height: 100%
@@ -198,11 +214,6 @@ a
 
     .images
       width: 100%
-
-      // &:hover .image-wrapper
-      //   opacity: 0.1
-      //   &:hover
-      //     opacity: 1
 
     .image-wrapper
       width: 33.3333%
@@ -449,62 +460,33 @@ a
   width: 100%
   z-index: 900
 
+  .photos
+    height: 0
+    width: 0
+
   .mentor
     text-align: left
     display: inline-block
     position: relative
-    width: 150px
-    height: 86.60px
-    margin: 60px 10px 40px
-    background-size: auto 173.2051px
-    background-color: black
-    background-position: center
-    transition: transform ease-in-out 0.2s, opacity ease-in-out 0.2s
+    width: 175px
+    height: 175px
+    transition: 0.2s ease-in-out transform
+
+    @media (screen and max-width: 1200px)
+      width: 125px
+      height: 125px
+
+    @media (screen and max-width: 800px)
+      width: 115px
+      height: 115px
 
     &:hover
       transform: scale(1.2)
-      opacity: 1
 
-    .top, .bottom
+    svg
       position: absolute
-      z-index: 1
-      width: 106.07px
-      height: 106.07px
-      overflow: hidden
-      transform: scaleY(0.5774) rotate(-45deg)
-      background: inherit
-      left: 21.97px
-
-      &:after
-        content: ''
-        position: absolute
-        width: 150.0000px
-        height: 86.60254037844388px
-        transform: rotate(45deg) scaleY(1.7321) translateY(-43.3013px)
-        transform-origin: 0 0
-        background: inherit
-
-    .top
-      top: -53.0330px
-
-      &:after
-        background-position: center top
-
-    .bottom
-      bottom: -53.0330px
-
-      &:after
-        background-position: center bottom
-
-    &:after
-      content: ''
-      position: absolute
-      top: 0.0000px
-      left: 0
-      width: 150.0000px
-      height: 86.6025px
-      z-index: 2
-      background: inherit
+      width: 100%
+      height: 100%
 
 // --------------------------------
 // Tweets
