@@ -21,3 +21,33 @@ exclude:
   - .editorconfig
   - Procfile
   - .sass-cache/
+
+mentors:
+  - name: ricky
+    twitter: rickycodes
+  - name: jeff
+    twitter: jeffjewiss
+  - name: brenna
+    twitter: brnnbrn
+  - name: darcy
+    twitter: darcy
+  - name: rich
+    twitter: richgilbank
+  - name: andrew
+    twitter: andrewdamelio
+  - name: tessa
+    twitter: tessthornton
+  - name: ahmad
+    twitter: ahmadnassri
+  - name: ryan
+    twitter: RChristiani
+  - name: vlad
+    twitter: vladikoff
+  - name: jeremiah
+    twitter: Fishrock123
+  - name: jordan
+    twitter: jrdnndtsch
+  - name: wisam
+    twitter: wisamjs
+  - name: drew
+    twitter: drewisthe

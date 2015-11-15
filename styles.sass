@@ -12,9 +12,12 @@
 // Variables
 // --------------------------------
 
-$accent: #C0493D // red
-$accent: #F7DA03 // yellow
-$blue: #1b95e0 // blue
+$base                 : #333333 // gray
+$accent               : #C0493D // red
+$highlight            : #e5e1cf // beige
+$secondary            : #28bbc6 // blue
+$secondary            : #e5e1cf // beige
+$tertiary             : #544f3b // dark beige
 
 // --------------------------------
 // Base
@@ -24,18 +27,20 @@ $blue: #1b95e0 // blue
   box-sizing: inherit
 
 html, body
-  background: black
+  background: $accent
   box-sizing: border-box
-  color: #333
+  color: $base
   font-family: 'Open Sans', sans-serif
   font-size: 16px
   line-height: 200%
+  overflow-x: hidden
 
 strong
   font-weight: 600
 
 h2, h3
-  font-weight: 300
+  color: $accent
+  font-weight: 400
   line-height: 160%
   margin: 1.5em 0 0.5em 0
 
@@ -45,7 +50,7 @@ h2, h3
 h2
   font-size: 32px
   padding: 0 0 0.5em 0
-  border-bottom: 1px solid #efefef
+  border-bottom: 1px solid rgba($accent, 0.15)
 
   @media (screen and max-width: 800px)
     font-size: 24px
@@ -55,25 +60,24 @@ img
 
 p code
   display: inline-block
-  background: black
+  background: $base
   color: white
   padding: 0 10px
   margin: 0 2px
-  font-size: 0.9em
-  border-radius: 3px
+  font-size: 1em
 
 a
   &:link, &:visited
-    color: $blue
+    color: $accent
     text-decoration: none
 
   &:hover, &:active
-    color: $blue
+    color: $accent
     text-decoration: underline
 
 ::selection
-  color: black
-  background: rgba(247, 218, 3, 0.35)
+  color: $base
+  background: rgba($secondary, 0.15)
   text-shadow: none
 
 // --------------------------------
@@ -96,30 +100,13 @@ a
 .cf
   *zoom: 1
 
-.indent
-  padding-left: 2em
-
 .terminal
   position: relative
-  background-color: black
+  background-color: $base
   color: white
   display: block
-  margin: 4em auto 3em auto
+  margin: 0 auto 15px auto
   padding: 2em 0
-  border-bottom-left-radius: 4px
-  border-bottom-right-radius: 4px
-
-  &:before
-    content: ''
-    display: block
-    width: 100%
-    height: 24px
-    background-color: #b9b9b9
-    background: linear-gradient(#ececec, #d3d3d3)
-    position: absolute
-    top: -24px
-    border-top-left-radius: 4px
-    border-top-right-radius: 4px
 
   pre
     font-size: 1em
@@ -127,12 +114,22 @@ a
     margin: 0
     padding-left: 2em
 
+.divider
+  color: rgba($base, 0.25)
+  margin: 0 10px
+
+.highlight
+  padding: 0 0 1px 0
+  border-bottom: 1px solid rgba(white, 0.35)
+
 // --------------------------------
 // Main
 // --------------------------------
 
 .main
   display: flex
+  transform: translate3d(0,0,0)
+  transition: transform 0.2s
 
   @media (screen and max-width: 800px)
     display: block
@@ -156,12 +153,20 @@ a
   // --------------------------------
 
   .side
-    background: black
+    background: $accent
     position: relative
-    color: white
+    color: $highlight
 
-    a
-      color: $accent
+    p
+      a
+        color: $highlight
+        padding-bottom: 2px
+        border-bottom: 1px solid rgba($highlight, 0.35)
+        transition: border-color 0.2s
+
+        &:hover
+          text-decoration: none
+          border-color: $highlight
 
     .container
       width: 100%
@@ -195,142 +200,20 @@ a
         .about
           margin: 0 auto 60px
           text-align: center
-          color: white
+          color: $highlight
           font-size: 20px
           font-weight: 300
           line-height: 200%
-          text-shadow: 0 0 10px rgba(0,0,0,0.8)
 
-    @-moz-document url-prefix()
-      .particles
-        display: none
-
-    .particles
-      width: 100%
-      height: 100%
-      position: absolute
-      top: 0
-      left: 0
-
-    .images
-      width: 100%
-
-    .image-wrapper
-      width: 33.3333%
-      height: 0
-      padding: 33.3333% 0 0 0
-      float: left
-      opacity: 0.25
-      display: block
-      position: relative
-      transition: opacity 0.5s
-
-      .image
-        width: 100%
-        height: 100%
-        position: absolute
-        top: 0
-        left: 0
-        display: block
-        background-size: cover
-        background-position: center center
+      h2
+        color: $highlight
+        border-color: rgba($highlight, 0.35)
 
   // --------------------------------
   // Left Side
   // --------------------------------
 
   .text
-
-    // --------------------------------
-    // Navigation
-    // --------------------------------
-    .nav
-      height: 100%
-      position: fixed
-      background: black
-      z-index: 9999
-      width: 80px
-      transition: width ease-in-out 0.2s
-      overflow: hidden
-
-      &:hover
-        width: 280px
-
-      @media (screen and max-width: 800px)
-        display: none
-
-      ul, li
-        margin: 0
-        padding: 0
-
-      li
-        list-style: none
-
-        a
-          width: 280px
-          height: 80px
-          display: block
-          position: relative
-          transition: background ease-in-out 0.2s
-          border-bottom: 1px solid rgba(255,255,255,0.15)
-
-          &:hover
-            background: $accent
-
-            &:before, &:after
-              color: black
-
-          &:before
-            content: ''
-            font-family: 'icon'
-            font-size: 20px
-            padding: 28px 0 0 0
-            line-height: 100%
-            text-align: center
-            left: 0
-            top: 0
-            position: absolute
-            display: block
-            height: 80px
-            width: 80px
-            color: white
-            transition: color ease-in-out 0.2s
-
-          &.home:before
-            content: '\e69b'
-
-          &.community:before
-            content: '\e665'
-
-          &.events:before
-            content: '\e66f'
-
-          &.faq:before
-            content: '\e69c'
-
-          &.mentors:before
-            content: '\e602'
-
-          &.code:before
-            content: '\e618' // e63b - flag // shield e67b
-
-          &:after
-            content: attr(data-text)
-            color: white
-            position: absolute
-            top: 0
-            left: 80px
-            padding: 38px 0 0
-            display: block
-            font-family: 'Open Sans', sans-serif
-            font-size: 18px
-            font-weight: 300
-            white-space: nowrap
-            transition: color ease-in-out 0.2s
-
-    // --------------------------------
-    // Text Container
-    // --------------------------------
 
     .container
       width: 100%
@@ -346,8 +229,8 @@ a
         .logo
           display: block
           position: relative
-          width: 35%
-          max-width: 200px
+          width: 40%
+          max-width: 400px
           margin: 0 auto 20px
 
           img
@@ -359,6 +242,8 @@ a
           text-align: center
           font-weight: 300
           margin: 0 auto 60px
+          letter-spacing: -1px
+          color: $accent
 
           @media (screen and max-width: 800px)
             font-size: 32px
@@ -370,79 +255,123 @@ a
 
 .event
   margin: 0
-  box-shadow: 0 0 50px rgba(0,0,0,0.8)
+  box-shadow: 0 0 30px darken($accent,15%)
+  background: $secondary
+  color: $tertiary
 
-  a
+  a, a:link, a:visited, a:active,
+  p a, p a:link, p a:visited, p a:active
+    color: $tertiary
+    padding: 0 0 1px 0
+    border-bottom: 1px solid rgba($tertiary, 0.35)
+
+  .register
     display: inline-block
     width: 100%
-    font-size: 16px
-    font-weight: 300
-    padding: 20px 30px 20px 0
-    background: $accent
+    font-size: 20px
+    line-height: 180%
+    font-weight: 100
+    padding: 0 25px
     transition: all ease-in-out 0.2s
     position: relative
-    white-space: nowrap
+
+    strong
+      display: inline-block
+      font-weight: 600
 
     @media (screen and max-width: 800px)
       padding-left: 20px
-
-    &:link, &:visited
-      color: black
-
-    &:active, &:hover
-      background-color: $accent
-      color: black
-      text-decoration: none
-
-      &:before
-        border-color: rgba(0,0,0,0.35)
-
-      &:after
-        background: $accent
-        transform: translate3d(20px, 0, 0)
-
-      & + div
-        border-color: $accent
 
     &:before, &:after
       font-family: 'icon'
 
     &:before
       content: '\e6b6'
+      font-size: 24px
       display: inline-block
-      padding: 0 20px 0 25px
-      margin: 0 15px 0 0
-      border-right: 1px solid rgba(0,0,0,0.35)
-      transition: border-color ease-in-out 0.3s
+      padding: 0 25px 0 8px
+      margin: 0
 
-      @media (screen and max-width: 800px)
-        display: none
+  .additional
+    padding: 20px 20px 30px 100px
+    margin: 0
+    position: relative
+    font-weight: 100
+    line-height: 200%
 
-    &:after
-      content: '\e649'
+    &:before
+      content: '\e6c5'
+      font-family: 'icon'
       display: block
-      width: 70px
-      height: 100%
-      color: black
-      padding: 20px 25px 20px 28px
-      overflow: hidden
-      background: $accent
       position: absolute
-      right: 0
-      top: 0
-      transition: background ease-in-out 0.2s, transform ease-in-out 0.3s
+      top: 50px
+      left: 35px
+      font-size: 32px
 
-      @media (screen and max-width: 800px)
-        display: none
+  .schedule, .location
+    line-height: 100%
+    padding: 30px 20px 20px 90px
+    margin: 0 0 10px 0
+    position: relative
+    font-size: 18px
+    font-weight: 100
+
+    &:before
+      content: '\e693'
+      font-family: 'icon'
+      font-size: 24px
+      display: block
+      position: absolute
+      top: 30px
+      left: 35px
+
+  .schedule
+    border-top: 1px solid rgba($tertiary, 0.35)
+    border-bottom: 1px solid rgba($tertiary, 0.35)
+    padding-bottom: 30px
+    margin: 0
+
+    &:before
+      content: '\e702'
+
+  .timeline
+    margin: 0
+    padding: 0
+    width: 100%
+    display: block
+
+    .row
+      @extend .cf
+      list-style: none
+      display: block
+      width: 100%
+      margin: 0
+      padding: 0
+      line-height: 100%
+      border-bottom: 1px solid rgba($tertiary, 0.35)
+
+      .time, .name
+        display: block
+        float: left
+        padding: 20px
+        text-align: left
+
+      .time
+        width: 30%
+        padding: 20px 10px 20px 30px
+        font-weight: 600
+        border-right: 1px solid rgba($tertiary, 0.35)
+
+      .name
+        width: 70%
+        font-size: 100
 
   .map
     width: 100%
     height: 0
     padding: 52.26% 0 0 0
     position: relative
-    border: 8px solid $accent
-    border-top: none
-    background: black
+    background: darken($secondary, 5%)
     transition: border-color ease-in-out 0.2s
 
     iframe
@@ -456,59 +385,296 @@ a
 // Mentors
 // --------------------------------
 
-.mentors
-  text-align: center
+.list-mentors
   width: 100%
   z-index: 900
+  margin: 50px 0 0 0
+
+  &:hover
+
+    .mentor
+      opacity: 0.25
+
+      &:hover
+        opacity: 1
+        transform: scale(1.5)
+        z-index: 9999
 
   .photos
     height: 0
     width: 0
 
   .mentor
-    text-align: left
-    display: inline-block
+    display: block
+    float: left
     position: relative
-    width: 175px
-    height: 175px
-    transition: 0.2s ease-in-out transform
+    text-align: center
+    width: 20%
+    height: 0
+    padding: 20% 0 0 0
+    margin: 0 0 20px 0
+    transition: opacity 0.3s, transform 0.2s
 
     @media (screen and max-width: 1200px)
-      width: 125px
-      height: 125px
-
-    @media (screen and max-width: 800px)
-      width: 115px
-      height: 115px
-
-    &:hover
-      transform: scale(1.2)
+      width: 25%
+      padding: 25% 0 0 0
 
     svg
+      top: 0
+      left: 0
       position: absolute
       width: 100%
       height: 100%
 
 // --------------------------------
-// Tweets
+// Photo Gallery
 // --------------------------------
 
-.tweets
+.gallery
+  position: relative
+  width: 100%
+  margin: 50px auto 0
 
-  iframe, iframe[id*="twitter-widget"], .timeline
-    max-width: 100%
-    width: 100%
+  &:hover
+
+    .image-wrapper
+      opacity: 0.25
+
+    .image-wrapper:hover
+      opacity: 1
+      transform: scale(1.5)
+      z-index: 9999
+
+  .image-wrapper
+    float: left
+    width: 20%
+    height: 0
+    padding: 20% 0 0 0
+    display: block
+    position: relative
+    transition: opacity 0.3s, transform 0.2s
+
+    @media (screen and max-width: 1200px)
+      width: 25%
+      padding: 25% 0 0 0
+
+    .image
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      background-color: $accent
+      background-size: cover
+      background-position: center center
+
+// --------------------------------
+// Navigation
+// --------------------------------
+
+.nav
+  height: 100%
+  position: fixed
+  background: $accent
+  z-index: 9999
+  width: 80px
+  transition: width 0.2s
+  overflow: hidden
+
+  &:hover
+    width: 280px
+
+    & + main
+      transform: translate3d(200px, 0, 0)
 
   @media (screen and max-width: 800px)
     display: none
 
+  ul, li
+    margin: 0
+    padding: 0
+
+  li
+    list-style: none
+
+    a
+      width: 280px
+      height: 80px
+      display: block
+      position: relative
+      transition: background ease-in-out 0.2s
+      border-bottom: 1px solid rgba($highlight,0.15)
+
+      &:hover
+        background: $highlight
+
+        &:before, &:after
+          color: $accent
+
+      &:before
+        content: ''
+        font-family: 'icon'
+        font-size: 20px
+        padding: 28px 0 0 0
+        line-height: 100%
+        text-align: center
+        left: 0
+        top: 0
+        position: absolute
+        display: block
+        height: 80px
+        width: 80px
+        color: $highlight
+        transition: color ease-in-out 0.2s
+
+      &.home:before
+        content: '\e69b'
+
+      &.community:before
+        content: '\e665'
+
+      &.events:before
+        content: '\e66f'
+
+      &.faq:before
+        content: '\e69c'
+
+      &.mentors:before
+        content: '\e602'
+
+      &.photos:before
+        content: '\e633'
+
+      &.code:before
+        content: '\e618' // e63b - flag // shield e67b
+
+      &:after
+        content: attr(data-text)
+        color: $highlight
+        position: absolute
+        top: 0
+        left: 80px
+        padding: 38px 0 0
+        display: block
+        font-family: 'Open Sans', sans-serif
+        font-size: 18px
+        font-weight: 400
+        white-space: nowrap
+        transition: color ease-in-out 0.2s
+
 // --------------------------------
-// Miscellaneous
+// Tito Ticket Listing
 // --------------------------------
 
-.particles-js-canvas-el
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
+.tito-ticket-list
+  border-top: 1px solid rgba($tertiary, 0.35)
+  margin: 0
+  padding: 0
+
+.tito-ticket
+  @extend .cf
+  display: block
+  padding: 0
+  margin: 0
+  list-style: none
+  border-bottom: 1px solid rgba($tertiary, 0.35)
+
+.tito-badge-link,
+.tito-notch
+  display: none !important
+
+.tito-ticket-name-wrapper,
+.tito-ticket-price-quantity-wrapper,
+.tito-ticket-price,
+.tito-ticket-quantity
+  display: block
+  float: left
+
+.tito-ticket-name-wrapper
+  width: 60%
+  padding: 20px 0 20px 90px
+  position: relative
+
+  @media (screen and max-width: 800px)
+    width: 100%
+
+  &:before
+    content: '\e66f'
+    font-family: 'icon'
+    font-size: 32px
+    font-weight: 100
+    line-height: 100%
+    position: absolute
+    display: block
+    top: 50%
+    left: 0
+    margin: -16px 0 0 0
+    padding: 0 0 0 30px
+
+.tito-ticket-price-quantity-wrapper
+  width: 40%
+
+  @media (screen and max-width: 800px)
+    width: 100%
+
+.tito-ticket-price,
+.tito-ticket-quantity
+  text-align: right
+
+.tito-ticket-price
+  padding: 25px 0 0
+  width: 40%
+
+  @media (screen and max-width: 800px)
+    padding: 20px
+    width: 50%
+
+.tito-ticket-quantity
+  padding: 25px 20px 0 0
+  width: 60%
+
+  @media (screen and max-width: 800px)
+    padding: 20px
+    width: 50%
+
+.tito-ticket-price span,
+.tito-ticket-quantity .tito-submit
+  display: inline-block
+  line-height: 100%
+  padding: 15px 25px
+
+.tito-submit
+  color: $tertiary
+  background: darken($secondary, 10%)
+  border: none
+  border-radius: 3px
+  font-weight: 600
+  transition: background 0.2s, color 0.2s
+
+  &:hover
+    color: $secondary
+    background: $tertiary
+
+.tito-ticket-price
+  font-weight: 600
+
+.tito-ticket-name,
+.tito-ticket-description
+  display: block
+
+.tito-ticket-name
+  font-weight: 600
+  font-size: 18px
+
+.tito-ticket-description
+  font-size: 14px
+  line-height: 160%
+  font-weight: 100
+
+.tito-badge-link
+  display: block
+  clear: both
+  width: 100%
+  padding: 15px 20px
+  text-align: right
