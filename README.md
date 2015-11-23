@@ -20,7 +20,7 @@ If you want to help teach or contribute in anyway, make a [Pull Request](https:/
 - Andrew D'Amelio [@andrewdamelio](http://github.com/andrewdamelio)
 - Tessa Thornton [@tessalt](http://github.com/tessalt)
 - Laura DeGroot [@lauradegroot](http://github.com/lauradegroot)
-- Chris Mendis [@chrismendis](http://github.com/chrismendis)
+- Chris Mendis: [@chrismendis](http://github.com/chrismendis)
 - Wisam Zaghal [@wzaghal](http://github.com/wzaghal)
 - Mohamad Atie [@mohamadatieh](https://github.com/MohamadAtieh)
 - Ahmad Nassri [@AhmadNassri](https://github.com/ahmadnassri)
