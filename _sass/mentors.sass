@@ -1,0 +1,44 @@
+// --------------------------------
+// Mentors
+// --------------------------------
+
+.list-mentors
+  width: 100%
+  z-index: 900
+  margin: 50px 0 0 0
+
+  &:hover
+
+    .mentor
+      opacity: 0.25
+
+      &:hover
+        opacity: 1
+        transform: scale(1.5)
+        z-index: 9999
+
+  .photos
+    height: 0
+    width: 0
+
+  .mentor
+    display: block
+    float: left
+    position: relative
+    text-align: center
+    width: 20%
+    height: 0
+    padding: 20% 0 0 0
+    margin: 0 0 20px 0
+    transition: opacity 0.3s, transform 0.2s
+
+    @media (screen and max-width: 1200px)
+      width: 25%
+      padding: 25% 0 0 0
+
+    svg
+      top: 0
+      left: 0
+      position: absolute
+      width: 100%
+      height: 100%

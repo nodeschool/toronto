@@ -1,36 +1,19 @@
 ![NodeSchool Toronto Logo](http://nodeschool.io/toronto/i/nodeschool-toronto-logo.svg)
 
-# NodeSchool [Toronto](https://www.google.com/maps?q=toronto&es_sm=91&um=1&ie=UTF-8&sa=X&ei=iv0jVfCBHIimgwTOgYPwBw&ved=0CAgQ_AUoAg) [![Slack Badge](https://nodeschool-toronto-slackin.herokuapp.com/badge.svg)](https://nodeschool-toronto-slackin.herokuapp.com/)
+### Development
 
-**NodeSchool** is focused around open source workshops that teach web software skills. Individuals are encouraged to do the [workshoppers](http://nodeschool.io/#workshoppers) on their own or at one of the NodeSchool events. The workshopper tutorials are used as the course curriculum while mentors are here to help attendees work through challenges. Participating in one of the events is easy:
+We use [Jekyll](https://jekyllrb.com/) to build [http://nodeschool.io/toronto](http://nodeschool.io/toronto). If you want to run the site or develop it locally you'll have to install [Jekyll](https://github.com/jekyll/jekyll) and [Jekyll-Sitemap](https://github.com/jekyll/jekyll-sitemap).
 
-### Want to Attend?
+`gem install jekyll`
 
-Check out our [website](http://nodeschool.io/toronto/), [event listing](https://ti.to/nodeschool-toronto) or sign up to our [newsletter](http://nodeschool.us11.list-manage.com/subscribe?u=62145c918d78960a0c95987c2&id=ec5cf6637f) for information on future events and other news.
+`gem install jekyll-sitemap`
 
-### Interested in Mentoring or Helping Out?
+We pull in event information through the [Tito](http://tito.io) embed widget but all the attendees listed are pulled via the [Tito API](http://api.tito.io). In order to update the listing of attendees, you'll have:
 
-If you want to help teach or contribute in anyway, make a [Pull Request](https://github.com/nodeschool/toronto/pulls) and add your name to the list below with relevant contact details; And/or contact [@rmillr](http://github.com/rmillr) or [@jeffjewiss](http://github.com/jeffjewiss) for further information. Mentors and Volunteers are currently contacted and confirmed, before each event, via our [Slack Channel](https://nodeschool-toronto-slackin.herokuapp.com/).
+- Request our Tito API key (ping @darcyclarke or @jeffjewiss)
 
-- Ricky Miller: [@rmillr](http://github.com/rmillr)
-- Jeff Jewiss: [@jeffjewiss](http://github.com/jeffjewiss)
-- Brenna O'Brien [@brenna](http://github.com/brenna)
-- Darcy Clarke: [@darcyclarke](http://github.com/darcyclarke)
-- Rich Gilbank: [@richgilbank](http://github.com/richgilbank)
-- Andrew D'Amelio [@andrewdamelio](http://github.com/andrewdamelio)
-- Tessa Thornton [@tessalt](http://github.com/tessalt)
-- Laura DeGroot [@lauradegroot](http://github.com/lauradegroot)
-- Chris Mendis [@chrismendis](http://github.com/chrismendis)
-- Wisam Zaghal [@wzaghal](http://github.com/wzaghal)
-- Mohamad Atie [@mohamadatieh](https://github.com/MohamadAtieh)
-- Ahmad Nassri [@AhmadNassri](https://github.com/ahmadnassri)
-- Ryan Christiani [@rchristiani](https://github.com/Rchristiani)
-- Vlad Filippov [@vladikoff](http://github.com/vladikoff)
+- Create a `config.json` in the root with the following: `{ "key": "..." }`
 
-### Code of Conduct
+- `npm install`
 
-Please read our [code of conduct](http://confcodeofconduct.com/) before contributing to or attending one of our events.
-
-### Do u kno node?
-
-![The more you node](https://lh3.googleusercontent.com/-2OoNYJvLvUE/UXBI2YH1FHI/AAAAAAAAYqQ/uuvTgt1OYQs/s640/themoreyounode.jpg)
+- `npm update-attendees`

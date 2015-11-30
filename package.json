@@ -1,0 +1,15 @@
+{
+  "name": "NodeSchool Toronto",
+  "description": "The NodeSchool Toronto Website",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodeschool/toronto"
+  },
+  "devDependencies": {
+    "request": "^2.66.0"
+  },
+  "scripts": {
+    "update-attendees": "update-attendees.js"
+  }
+}
