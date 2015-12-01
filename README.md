@@ -10,7 +10,7 @@ Check out our [website](http://nodeschool.io/toronto/), [event listing](https://
 
 ### Interested in Mentoring or Helping Out?
 
-If you want to help teach or contribute in anyway, make a [Pull Request](https://github.com/nodeschool/toronto/pulls) and add your name to the list below with relevant contact details; And/or contact [@rmillr](http://github.com/rmillr) or [@jeffjewiss](http://github.com/jeffjewiss) for further information. Mentors and Volunteers are currently contacted and confirmed, before each event, via our [Slack Channel](https://nodeschool-toronto-slackin.herokuapp.com/).
+If you want to help teach or contribute in anyway, make a [Pull Request](https://github.com/nodeschool/toronto/pulls) and add your name to the list below with relevant contact details; And/or contact [@rmillr](http://github.com/rickycodes) or [@jeffjewiss](http://github.com/jeffjewiss) for further information. Mentors and Volunteers are currently contacted and confirmed, before each event, via our [Slack Channel](https://nodeschool-toronto-slackin.herokuapp.com/).
 
 - Ricky Miller: [@rickycodes](http://github.com/rickycodes)
 - Jeff Jewiss: [@jeffjewiss](http://github.com/jeffjewiss)
