@@ -7,9 +7,13 @@
     "url": "https://github.com/nodeschool/toronto"
   },
   "devDependencies": {
-    "request": "^2.66.0"
+    "async": "^1.5.0",
+    "colors": "^1.1.2",
+    "gravatar": "^1.4.0",
+    "lodash": "^3.10.1",
+    "superagent": "^1.4.0"
   },
   "scripts": {
-    "update-attendees": "update-attendees.js"
+    "update-attendees": "node ./tasks/update-attendees.js"
   }
 }

@@ -17,6 +17,32 @@
 
   <body>
 
+    <!-- SVG Images -->
+    <svg class="svgs" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        {% for mentor in site.mentors %}
+        <pattern id="mentor-{{forloop.index}}" width="300" height="300" patternUnits="userSpaceOnUse">
+          <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/mentors/{{mentor.name}}.jpg" width="250" height="300" preserveAspectRatio="xMidYMid slice">
+          </image>
+        </pattern>
+        {% endfor %}
+        {% for i in (1..30) %}
+        <pattern id="photo-{{i}}" width="300" height="300" patternUnits="userSpaceOnUse">
+          <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/photos/{{i}}.jpg" width="250" height="300" preserveAspectRatio="xMidYMid slice">
+          </image>
+        </pattern>
+        {% endfor %}
+        {% for value in site.data.attendees %}
+        {% for attendee in value[1] %}
+        <pattern id="attendee-{{attendee[0]}}" width="300" height="300" patternUnits="userSpaceOnUse">
+          <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{attendee[1]}}" width="250" height="300" preserveAspectRatio="xMidYMid slice">
+          </image>
+        </pattern>
+        {% endfor %}
+        {% endfor %}
+      </defs>
+    </svg>
+
     <!-- Navigation -->
     <nav class="nav">
       <ul>
@@ -25,6 +51,7 @@
         <li><a href="#events" class="ir events" data-text="Events">Events</a></li>
         <li><a href="#faq" class="ir faq" data-text="FAQ">Frequently Asked Questions</a></li>
         <li><a href="#mentors" class="ir mentors" data-text="Mentors">Mentors</a></li>
+        <li><a href="#attendees" class="ir attendees" data-text="Attendees">Attendees</a></li>
         <li><a href="#photos" class="ir photos" data-text="Photos">Photos</a></li>
         <li><a href="#codeofconduct" class="ir code" data-text="Code of Conduct">Code of Conduct</a></li>
       </ul>
@@ -104,6 +131,20 @@
             <pre>$ learnyounode</pre>
           </code>
 
+          <h2 id="photos">Photos</h2>
+
+          <div class="list-photos cf">
+            {% for i in (1..30) %}
+            {% cycle '<div class="row">', '', '', '', '' %}
+              <a href="i/photos/{{i}}.jpg" target="_blank" class="image-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 300" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <polygon class="hex" points="250,75 250,225 125,300 0,225 0,75 125,0" fill="url('#photo-{{i}}')"></polygon>
+                </svg>
+              </a>
+            {% cycle '', '', '', '', '</div>' %}
+            {% endfor %}
+          </div>
+
           <h2 id="codeofconduct">Code of Conduct</h2>
 
           <p>We, the organizers of <strong>NodeSchool Toronto</strong>, are dedicated to providing a harassment-free community for everyone, regardless of sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs. We do not tolerate harassment of community members in any form. Participants violating these rules may be sanctioned or expelled from the community at the discretion of the organizers of <strong>NodeSchool Toronto</strong>.</p>
@@ -171,7 +212,11 @@
                 </li>
                 <li class="row">
                   <span class="time">1:00pm - 1:30pm</span>
-                  <span class="name">Presentations</span>
+                  <span class="name">Presentations:<br>
+                    <a href="http://twitter.com/rickycodes"><strong>@rickycodes</strong> - Electron + Audio</a><br>
+                    <a href="http://twitter.com/andrewdamelio"><strong>@andrewdamelio</strong> - Electron + Emojis</a><br>
+                    <a href="http://twitter.com/darcy"><strong>@darcy</strong> - Video Streaming</a>
+                  </span>
                 </li>
                 <li class="row">
                   <span class="time">1:30pm - 3:30pm</span>
@@ -196,39 +241,36 @@
             <p>Mentors are currently <strong>contacted and confirmed</strong> before each event in our <a href='https://nodeschool-toronto-slackin.herokuapp.com/'>Slack Channel</a>.</p>
 
             <div class="list-mentors cf">
-
-              <svg class="photos" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs>
-                  {% for mentor in site.mentors %}
-                  <pattern id="{{mentor.name}}" width="300" height="300" patternUnits="userSpaceOnUse">
-                    <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="i/mentors/{{mentor.name}}.jpg" width="250" height="300" preserveAspectRatio="xMidYMid slice">
-                    </image>
-                  </pattern>
-                  {% endfor %}
-                </defs>
-              </svg>
-
               {% for mentor in site.mentors %}
-              <a href="https://twitter.com/{{mentor.twitter}}" target="_blank" class="mentor">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 300" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <polygon class="hex" points="250,75 250,225 125,300 0,225 0,75 125,0" fill="url('#{{mentor.name}}')"></polygon>
-                </svg>
-              </a>
+                {% cycle '<div class="row">', '', '', '', '' %}
+                  <a href="https://twitter.com/{{mentor.twitter}}" target="_blank" class="image-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 300" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <polygon class="hex" points="250,75 250,225 125,300 0,225 0,75 125,0" fill="url('#mentor-{{forloop.index}}')"></polygon>
+                    </svg>
+                  </a>
+                {% cycle '', '', '', '', '</div>' %}
               {% endfor %}
-
             </div>
 
-            <h2 id="photos">Photos</h2>
+            <h2 id="attendees">Attendees</h2>
 
-            <div class="gallery">
-              {% for i in (1..23) %}
-              <a href="i/photos/{{i}}.jpg" target="_blank" class="image-wrapper">
-                <div class="image" style="background-image: url(i/photos/{{i}}.jpg);"></div>
-              </a>
+            <div class="list-attendees cf">
+              {% for value in site.data.attendees %}
+                {% for attendee in value[1] %}
+                {% cycle '<div class="row">', '', '', '', '', '', '', '' %}
+                  <div class="image-wrapper">
+                    <div class="badge"><span>{{attendee[2]}}</span></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 300" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <polygon class="hex" points="250,75 250,225 125,300 0,225 0,75 125,0" fill="url('#attendee-{{attendee[0]}}')"></polygon>
+                    </svg>
+                  </div>
+                {% cycle '', '', '', '', '', '', '', '</div>' %}
+                {% endfor %}
               {% endfor %}
             </div>
 
           </div>
+
         </div>
 
       </aside>
