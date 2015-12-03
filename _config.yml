@@ -21,7 +21,7 @@ exclude:
   - .editorconfig
   - Procfile
   - .sass-cache/
-  -tasks/
+  - tasks/
 
 mentors:
   - name: ricky
