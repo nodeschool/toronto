@@ -1,5 +1,4 @@
 markdown: kramdown
-highlighter: pygments
 permalink: /:title
 url: "http://nodeschool.io/toronto"
 timezone: America/Toronto
