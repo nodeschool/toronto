@@ -16,4 +16,4 @@ We pull in event information through the [Tito](http://tito.io) embed widget but
 
 - `npm install`
 
-- `npm update-attendees` or `node ./tasks/update-attendees.js`
+- `npm run update-attendees` or `node ./tasks/update-attendees.js`
