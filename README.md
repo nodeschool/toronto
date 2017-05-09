@@ -29,6 +29,7 @@ If you want to help teach or contribute in anyway, make a [Pull Request](https:/
 - Jeremiah Senkpiel [@Fishrock123](https://github.com/Fishrock123)
 - Nicole Chung [@nicolechung](https://github.com/nicolechung)
 - Michael Perrotte [@mikemimik](https://github.com/mikemimik)
+- Jason Etcovitch [@jasonetco](https://github.com/JasonEtco)
 
 ### Code of Conduct
 
