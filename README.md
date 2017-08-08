@@ -30,6 +30,7 @@ If you want to help teach or contribute in anyway, make a [Pull Request](https:/
 - Nicole Chung [@nicolechung](https://github.com/nicolechung)
 - Michael Perrotte [@mikemimik](https://github.com/mikemimik)
 - Jason Etcovitch [@jasonetco](https://github.com/JasonEtco)
+- Giorgio Delgado [@gDelgado14](https://github.com/gDelgado14)
 
 ### Code of Conduct
 
