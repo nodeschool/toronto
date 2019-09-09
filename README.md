@@ -31,6 +31,7 @@ If you want to help teach or contribute in anyway, make a [Pull Request](https:/
 - Michael Perrotte [@mikemimik](https://github.com/mikemimik)
 - Jason Etcovitch [@jasonetco](https://github.com/JasonEtco)
 - Makrand Gupta [@makrandgupta](https://github.com/makrandgupta)
+- Sylvan Mably [@smably](https://github.com/smably)
 
 ### Code of Conduct
 
